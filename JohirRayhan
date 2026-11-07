@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Voyage - জহির রায়হান সেট</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Bengali (Hind Siliguri) & English (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            background-color: #f1f5f9; /* হালকা কালো-নীল আভা যুক্ত ব্যাকগ্রাউন্ড */
+            color: #1e293b;
+        }
+        .english-font {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Checkbox and Radio styling */
+        .custom-checkbox:checked {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER SECTION -->
+    <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <!-- Top Logo Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center border-b border-slate-800">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md group-hover:bg-blue-500 transition duration-300">
+                    <i class="fa-solid fa-book-open-reader text-2xl"></i>
+                </div>
+                <div>
+                    <span class="english-font font-extrabold text-2xl tracking-wider text-white block leading-none">Book Voyage</span>
+                    <span class="text-xs text-blue-400 font-medium">বুক ভয়েজ - বইয়ের বিশ্বস্ত ভুবন</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg hover:bg-slate-800">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Main Navigation Bar (Bengali Links) -->
+        <nav class="bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div id="menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-1 py-2">
+                    <a href="index.html" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-house text-sm"></i>
+                        <span>হোম</span>
+                    </a>
+                    <a href="about.html" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-info text-sm"></i>
+                        <span>অ্যাবাউট আস</span>
+                    </a>
+                    <a href="category.html" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-layer-group text-sm"></i>
+                        <span>ক্যাটাগরি</span>
+                    </a>
+                    <a href="publishers.html" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-building-columns text-sm"></i>
+                        <span>পাবলিশার্স</span>
+                    </a>
+                    <a href="contact.html" class="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition duration-200 flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                        <span>কন্ট্যাক্ট আস</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-8">
+
+        <!-- PAGE BANNER / TITLE -->
+        <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-3 text-center md:text-left">
+                <span class="bg-blue-600 text-xs font-bold uppercase px-3 py-1 rounded-full text-white tracking-widest">স্পেশাল অফার সেট</span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white">জহির রায়হান সেট (৩টি বই)</h1>
+                <p class="text-slate-300 text-base sm:text-lg">কালজয়ী কথাসাহিত্যিক জহির রায়হানের সেরা ৩টি জনপ্রিয় উপন্যাস নিয়ে বিশেষ অফার প্যাকেজ।</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20 text-center flex-shrink-0">
+                <span class="text-slate-300 text-sm font-medium block">সর্বমোট বাজারমূল্য: <span class="line-through text-slate-400">৳৪৯০</span></span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-blue-400">বিশেষ মূল্য: ৳৩৯২</span>
+            </div>
+        </div>
+
+        <!-- FORM & ORDER PREVIEW GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT COLUMN: ORDER FORM & SELECTION (8 Cols) -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-8">
+                    
+                    <!-- STEP 1: BOOK SELECTION -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 pb-4">
+                            <div class="p-2.5 bg-blue-100 text-blue-600 rounded-xl font-bold">১</div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-slate-800">বই নির্বাচন করুন</h2>
+                        </div>
+
+                        <!-- Books List -->
+                        <div class="space-y-4">
+                            <!-- Book 1 -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-blue-500 bg-blue-50/50 cursor-pointer transition hover:border-blue-600 space-x-4">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" checked value="0" onchange="calculateTotal()" class="book-checkbox w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300">
+                                    <div>
+                                        <h3 class="font-bold text-slate-900 text-lg">আরেক ফাল্গুন</h3>
+                                        <p class="text-xs text-slate-500">মূল্য: <span class="line-through">৳১৮০</span> (২০% ছাড়)</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-blue-600 text-lg">৳১৪৪</span>
+                                </div>
+                            </label>
+
+                            <!-- Book 2 -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-blue-500 bg-blue-50/50 cursor-pointer transition hover:border-blue-600 space-x-4">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" checked value="1" onchange="calculateTotal()" class="book-checkbox w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300">
+                                    <div>
+                                        <h3 class="font-bold text-slate-900 text-lg">একুশে ফেব্রুয়ারি</h3>
+                                        <p class="text-xs text-slate-500">মূল্য: <span class="line-through">৳১৫০</span> (২০% ছাড়)</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-blue-600 text-lg">৳১২০</span>
+                                </div>
+                            </label>
+
+                            <!-- Book 3 -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-blue-500 bg-blue-50/50 cursor-pointer transition hover:border-blue-600 space-x-4">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" checked value="2" onchange="calculateTotal()" class="book-checkbox w-5 h-5 text-blue-600 rounded focus:ring-blue-500 border-slate-300">
+                                    <div>
+                                        <h3 class="font-bold text-slate-900 text-lg">আর কত দিন</h3>
+                                        <p class="text-xs text-slate-500">মূল্য: <span class="line-through">৳১৬০</span> (২০% ছাড়)</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-blue-600 text-lg">৳১২৮</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Subtotal Display inside step 1 -->
+                        <div class="flex justify-between items-center pt-2 text-slate-700 font-semibold text-base border-t border-slate-100">
+                            <span>বাছাইকৃত বইয়ের মোট মূল্য:</span>
+                            <span id="selectedSubtotal" class="text-blue-600 font-extrabold text-xl">৳৩৯২</span>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: COURIER SELECTION -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 pb-4">
+                            <div class="p-2.5 bg-blue-100 text-blue-600 rounded-xl font-bold">২</div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-slate-800">কুরিয়ার ও ডেলিভারি মাধ্যম বাছাই করুন</h2>
+                        </div>
+
+                        <!-- Courier Radio Options -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Sundarban -->
+                            <label class="flex items-start p-4 rounded-2xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer transition space-x-3 bg-slate-50">
+                                <input type="radio" name="courierMethod" value="sundarban" checked onchange="calculateTotal()" class="mt-1 text-blue-600 focus:ring-blue-500">
+                                <div>
+                                    <span class="font-bold text-slate-900 block text-base">সুন্দরবন কুরিয়ার</span>
+                                    <span class="text-xs text-blue-600 font-semibold block mt-0.5">সারাদেশে ৳৬০</span>
+                                    <span class="text-xs text-slate-500 block mt-1">কুরিয়ার অফিশিয়াল শাখা থেকে পার্সেল নিতে হবে।</span>
+                                </div>
+                            </label>
+
+                            <!-- Cash on Delivery -->
+                            <label class="flex items-start p-4 rounded-2xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer transition space-x-3 bg-slate-50">
+                                <input type="radio" name="courierMethod" value="cod" onchange="calculateTotal()" class="mt-1 text-blue-600 focus:ring-blue-500">
+                                <div>
+                                    <span class="font-bold text-slate-900 block text-base">ক্যাশ অন ডেলিভারি (হোম ডেলিভারি)</span>
+                                    <span class="text-xs text-blue-600 font-semibold block mt-0.5">ঢাকা সিটি: ৳৬০ | সিটির বাহিরে: ৳১১০</span>
+                                    <span class="text-xs text-slate-500 block mt-1">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন।</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: CUSTOMER INFORMATION -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-slate-100 pb-4">
+                            <div class="p-2.5 bg-blue-100 text-blue-600 rounded-xl font-bold">৩</div>
+                            <h2 class="text-xl sm:text-2xl font-bold text-slate-800">আপনার ঠিকানা ও তথ্য</h2>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">আপনার নাম <span class="text-red-500">*</span></label>
+                                <input type="text" required id="custName" oninput="updatePreview()" placeholder="যেমন: মোহাম্মদ আরিফ" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+
+                            <!-- WhatsApp Number -->
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">আপনার হোয়াটসঅ্যাপ নাম্বার <span class="text-red-500">*</span></label>
+                                <input type="tel" required id="custPhone" oninput="updatePreview()" placeholder="যেমন: 01700000000" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                
+                                <!-- Special WhatsApp Alert Box -->
+                                <div class="mt-2.5 p-3.5 bg-amber-50 border border-amber-200 rounded-xl flex items-start space-x-3 text-amber-900 text-xs sm:text-sm">
+                                    <i class="fa-brands fa-whatsapp text-green-600 text-lg flex-shrink-0 mt-0.5"></i>
+                                    <p class="leading-relaxed">
+                                        <strong class="font-bold">বিশেষ দ্রষ্টব্য:</strong> আপনার অর্ডারটি কনফার্ম করার জন্য ২৪ ঘণ্টার মধ্যে হোয়াটসঅ্যাপে মেসেজ দেওয়া হবে। হোয়াটসঅ্যাপে মেসেজ দেওয়ার পরেই আপনার অর্ডারটি সফলভাবে কনফার্ম হবে।
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- District Dropdown -->
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">জেলা নির্বাচন করুন <span class="text-red-500">*</span></label>
+                                <select id="custDistrict" required onchange="calculateTotal()" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 font-medium text-slate-800">
+                                    <option value="" disabled selected>আপনার জেলা বেছে নিন</option>
+                                    <option value="dhaka_inside">ঢাকা (সিটি কর্পোরেশনের ভেতরে)</option>
+                                    <option value="dhaka_outside">ঢাকা (সিটি কর্পোরেশনের বাহিরে)</option>
+                                    <!-- 64 Districts -->
+                                    <option value="bagerhat">বাগেরহাট</option>
+                                    <option value="bandarban">বান্দরবান</option>
+                                    <option value="barguna">বরগুনা</option>
+                                    <option value="barishal">বরিশাল</option>
+                                    <option value="bhola">ভোলা</option>
+                                    <option value="bogra">বগুড়া</option>
+                                    <option value="brahmanbaria">ব্রাহ্মণবাড়িয়া</option>
+                                    <option value="chandpur">চাঁদপুর</option>
+                                    <option value="chattogram">চট্টগ্রাম</option>
+                                    <option value="chuadanga">চুয়াডাঙ্গা</option>
+                                    <option value="comilla">কুমিল্লা</option>
+                                    <option value="coxsbazar">কক্সবাজার</option>
+                                    <option value="dinajpur">দিনাজপুর</option>
+                                    <option value="faridpur">ফরিদপুর</option>
+                                    <option value="feni">ফেনী</option>
+                                    <option value="gaibandha">গাইবান্ধা</option>
+                                    <option value="gazipur">গাজীপুর</option>
+                                    <option value="gopalganj">গোপালগঞ্জ</option>
+                                    <option value="habiganj">হবিগঞ্জ</option>
+                                    <option value="jamalpur">জামালপুর</option>
+                                    <option value="jessore">যশোর</option>
+                                    <option value="jhalokati">ঝালকাঠি</option>
+                                    <option value="jhenaidah">ঝিনাইদহ</option>
+                                    <option value="joypurhat">জয়পুরহাট</option>
+                                    <option value="khagrachhari">খাগড়াছড়ি</option>
+                                    <option value="khulna">খুলনা</option>
+                                    <option value="kishoreganj">কিশোরগঞ্জ</option>
+                                    <option value="kurigram">কুড়িগ্রাম</option>
+                                    <option value="kushtia">কুষ্টিয়া</option>
+                                    <option value="lakshmipur">লক্ষ্মীপুর</option>
+                                    <option value="lalmonirhat">লালমনিরহাট</option>
+                                    <option value="madaripur">মাদারীপুর</option>
+                                    <option value="magura">মাগুরা</option>
+                                    <option value="manikganj">মানিকগঞ্জ</option>
+                                    <option value="meherpur">মেহেরপুর</option>
+                                    <option value="moulvibazar">মৌলভীবাজার</option>
+                                    <option value="munshiganj">মুন্সিগঞ্জ</option>
+                                    <option value="mymensingh">ময়মনসিংহ</option>
+                                    <option value="naogaon">নওগাঁ</option>
+                                    <option value="narail">নড়াইল</option>
+                                    <option value="narayanganj">নারায়ণগঞ্জ</option>
+                                    <option value="narsingdi">নরসিংদী</option>
+                                    <option value="natore">নাটোর</option>
+                                    <option value="netrokona">নেত্রকোণা</option>
+                                    <option value="nilphamari">নীলফামারী</option>
+                                    <option value="noakhali">নোয়াখালী</option>
+                                    <option value="pabna">পাবনা</option>
+                                    <option value="panchagarh">পঞ্চগড়</option>
+                                    <option value="patuakhali">পটুয়াখালী</option>
+                                    <option value="pirojpur">পিরোজপুর</option>
+                                    <option value="rajbari">রাজবাড়ী</option>
+                                    <option value="rajshahi">রাজশাহী</option>
+                                    <option value="rangamati">রাঙ্গামাটি</option>
+                                    <option value="rangpur">রংপুর</option>
+                                    <option value="satkhira">সাতক্ষীরা</option>
+                                    <option value="shariatpur">শরীয়তপুর</option>
+                                    <option value="sherpur">শেরপুর</option>
+                                    <option value="sirajganj">সিরাজগঞ্জ</option>
+                                    <option value="sunamganj">সুনামগঞ্জ</option>
+                                    <option value="sylhet">সিলেট</option>
+                                    <option value="tangail">টাঙ্গাইল</option>
+                                    <option value="thakurgaon">ঠাকুরগাঁও</option>
+                                </select>
+                            </div>
+
+                            <!-- Full Address Textarea -->
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">বিস্তারিত ঠিকানা (বাসা/রোড/থানা) <span class="text-red-500">*</span></label>
+                                <textarea id="custAddress" required oninput="updatePreview()" rows="3" placeholder="যেমন: বাসা #১২, রোড #৪, সেক্টর #৭, উত্তরা, ঢাকা" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button Mobile Visible -->
+                    <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xl rounded-2xl shadow-xl transition duration-300 flex items-center justify-center space-x-3 active:scale-95">
+                        <i class="fa-solid fa-cart-check text-2xl"></i>
+                        <span>অর্ডার কনফার্ম করুন</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: LIVE ORDER PREVIEW MEMO (5 Cols) -->
+            <div class="lg:col-span-5 sticky top-24">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-blue-200 space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-2 bg-blue-600 text-white rounded-lg">
+                                <i class="fa-solid fa-receipt text-lg"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-900">অর্ডার মেমো প্রিভিউ</h2>
+                        </div>
+                        <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">লাইভ আপডেট</span>
+                    </div>
+
+                    <!-- Customer Short Info -->
+                    <div class="bg-slate-50 p-4 rounded-xl text-sm space-y-1.5 border border-slate-100">
+                        <p class="text-slate-600"><strong class="text-slate-800">গ্রাহকের নাম:</strong> <span id="memoName" class="text-blue-600 font-semibold">---</span></p>
+                        <p class="text-slate-600"><strong class="text-slate-800">হোয়াটসঅ্যাপ:</strong> <span id="memoPhone" class="text-slate-700 font-medium">---</span></p>
+                        <p class="text-slate-600"><strong class="text-slate-800">ঠিকানা/জেলা:</strong> <span id="memoAddress" class="text-slate-700 font-medium">---</span></p>
+                    </div>
+
+                    <!-- Order Items List -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">বাছাইকৃত বইয়ের তালিকা</h3>
+                        <ul id="memoBookList" class="space-y-2 text-sm text-slate-700 divide-y divide-slate-100">
+                            <!-- Items added dynamically JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Price Calculation Table -->
+                    <div class="border-t border-slate-200 pt-4 space-y-2.5 text-sm">
+                        <div class="flex justify-between text-slate-600">
+                            <span>মোট বইয়ের সংখ্যা:</span>
+                            <span id="memoCount" class="font-bold text-slate-800">৩ টি</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>বইয়ের মোট দাম:</span>
+                            <span id="memoSubtotal" class="font-bold text-slate-800">৳৩৯২</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>কুরিয়ার পদ্ধতি:</span>
+                            <span id="memoCourierName" class="font-semibold text-slate-800">সুন্দরবন কুরিয়ার</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>ডেলিভারি চার্জ:</span>
+                            <span id="memoDeliveryFee" class="font-bold text-slate-800">৳৬০</span>
+                        </div>
+                        
+                        <div class="border-t-2 border-dashed border-slate-200 pt-3 flex justify-between items-center text-slate-900">
+                            <span class="text-base font-extrabold">সর্বমোট প্রদেয় মূল্য:</span>
+                            <span id="memoTotal" class="text-2xl font-black text-blue-600">৳৪৫২</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-3.5 rounded-xl text-center text-xs text-blue-800 font-medium">
+                        <i class="fa-solid fa-shield-halved text-blue-600 mr-1"></i> ১০০% অরিজিনাল বই ও নিরাপদ ডেলিভারি
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- SUCCESS MODAL SCREEN (Hidden by default) -->
+    <div id="successModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-center space-y-6 shadow-2xl border border-slate-100 relative animate-fade-in">
+            <!-- Icon -->
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto shadow-inner text-4xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <!-- Title & Message -->
+            <div class="space-y-2">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">আপনার অর্ডারটি সফল হয়েছে!</h3>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    ধন্যবাদ! আপনার অর্ডারটি আমাদের সিস্টেমে সফলভাবে গৃহীত হয়েছে। খুব দ্রুত আমাদের প্রতিনিধি আপনার সাথে হোয়াটসঅ্যাপে যোগাযোগ করে অর্ডারটি কনফার্ম করবে।
+                </p>
+            </div>
+
+            <!-- Info Box -->
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-left text-sm space-y-2">
+                <p class="text-slate-700"><strong>অর্ডার ট্র্যাকিং আইডি:</strong> <span id="modalOrderId" class="text-blue-600 font-bold">BV-84920</span></p>
+                <p class="text-slate-700"><strong>প্রদেয় মোট টাকা:</strong> <span id="modalTotalPay" class="text-slate-900 font-extrabold"></span></p>
+                <p class="text-xs text-slate-500 pt-1 border-t border-slate-200">জরুরি প্রয়োজনে আমাদের সাথে নিচে সরাসরি যোগাযোগ করতে পারেন:</p>
+            </div>
+
+            <!-- Two Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a href="https://wa.me/8801700000000" target="_blank" class="w-full py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-md transition flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>হোয়াটসঅ্যাপে যোগাযোগ করুন</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-facebook text-xl"></i>
+                    <span>ফেসবুক পেজে মেসেজ দিন</span>
+                </a>
+            </div>
+
+            <button onclick="closeModal()" class="text-xs text-slate-400 hover:text-slate-600 font-medium underline pt-2">
+                বন্ধ করুন ও হোমপেজে ফিরে যান
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-white pt-12 pb-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                            <i class="fa-solid fa-book-open-reader text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">বুক ভয়েজ <span class="english-font font-medium text-lg text-slate-400">(Book Voyage)</span></h3>
+                    </div>
+                    <p class="english-font text-blue-400 font-semibold italic text-base tracking-wide">
+                        "Every book is a journey"
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        বুক ভয়েজ একটি প্ল্যাটফর্ম যেখানে আপনি পাবেন আপনার পছন্দের সমস্ত বইয়ের তথ্য, কালজয়ী বইয়ের সেট ও সেরা অফারসমূহ।
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-slate-200 border-l-4 border-blue-600 pl-3">গুরুত্বপূর্ণ লিংক</h4>
+                    <ul class="space-y-2 text-slate-300 font-medium">
+                        <li>
+                            <a href="about.html" class="hover:text-blue-400 transition duration-200 flex items-center space-x-2">
+                                <i class="fa-solid fa-angle-right text-xs text-blue-500"></i>
+                                <span>অ্যাবাউট আস</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="hover:text-blue-400 transition duration-200 flex items-center space-x-2">
+                                <i class="fa-solid fa-angle-right text-xs text-blue-500"></i>
+                                <span>কন্ট্যাক্ট আস</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="hover:text-blue-400 transition duration-200 flex items-center space-x-2">
+                                <i class="fa-solid fa-angle-right text-xs text-blue-500"></i>
+                                <span>প্রাইভেসি পলিসি</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-slate-200 border-l-4 border-blue-600 pl-3">যোগাযোগ</h4>
+                    <p class="text-slate-400 text-sm">
+                        যেকোনো প্রশ্ন বা তথ্যের জন্য আমাদের সাথে সরাসরি যোগাযোগ করুন।
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center text-slate-300 hover:text-white transition duration-300">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center text-slate-300 hover:text-white transition duration-300">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center text-slate-300 hover:text-white transition duration-300">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="pt-6 text-center text-slate-400 text-sm font-medium">
+                <p>&copy; <span id="year">2026</span> <span class="english-font">Book Voyage</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Book Data Array
+        const booksData = [
+            { id: 0, title: "আরেক ফাল্গুন", originalPrice: 180, discountedPrice: 144 },
+            { id: 1, title: "একুশে ফেব্রুয়ারি", originalPrice: 150, discountedPrice: 120 },
+            { id: 2, title: "আর কত দিন", originalPrice: 160, discountedPrice: 128 }
+        ];
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Dynamic Calculation & Preview Update
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('.book-checkbox');
+            let subtotal = 0;
+            let selectedCount = 0;
+            let memoBookListHTML = '';
+
+            checkboxes.forEach((cb) => {
+                if (cb.checked) {
+                    const book = booksData[cb.value];
+                    subtotal += book.discountedPrice;
+                    selectedCount++;
+                    memoBookListHTML += `
+                        <li class="flex justify-between items-center py-1">
+                            <span>• ${book.title}</span>
+                            <span class="font-bold">৳${book.discountedPrice}</span>
+                        </li>
+                    `;
+                }
+            });
+
+            if (selectedCount === 0) {
+                memoBookListHTML = '<li class="text-red-500 italic py-1">কোনো বই বাছাই করা হয়নি</li>';
+            }
+
+            // Subtotal Update
+            document.getElementById('selectedSubtotal').textContent = `৳${subtotal}`;
+            document.getElementById('memoSubtotal').textContent = `৳${subtotal}`;
+            document.getElementById('memoCount').textContent = `${selectedCount} টি`;
+            document.getElementById('memoBookList').innerHTML = memoBookListHTML;
+
+            // Delivery Fee Calculation based on Courier & District Selection
+            const courierMethod = document.querySelector('input[name="courierMethod"]:checked').value;
+            const district = document.getElementById('custDistrict').value;
+            let deliveryFee = 60; // Default Sundarban or Dhaka city
+            let courierName = 'সুন্দরবন কুরিয়ার';
+
+            if (courierMethod === 'sundarban') {
+                deliveryFee = 60;
+                courierName = 'সুন্দরবন কুরিয়ার (সারাদেশ)';
+            } else if (courierMethod === 'cod') {
+                if (district === 'dhaka_inside') {
+                    deliveryFee = 60;
+                    courierName = 'ক্যাশ অন ডেলিভারি (ঢাকা সিটি)';
+                } else if (district === 'dhaka_outside') {
+                    deliveryFee = 110;
+                    courierName = 'ক্যাশ অন ডেলিভারি (ঢাকার বাহিরে)';
+                } else if (district !== '') {
+                    deliveryFee = 110;
+                    courierName = 'ক্যাশ অন ডেলিভারি (অন্যান্য জেলা)';
+                } else {
+                    deliveryFee = 60;
+                    courierName = 'ক্যাশ অন ডেলিভারি';
+                }
+            }
+
+            document.getElementById('memoCourierName').textContent = courierName;
+            document.getElementById('memoDeliveryFee').textContent = `৳${deliveryFee}`;
+
+            // Grand Total
+            const grandTotal = subtotal + (selectedCount > 0 ? deliveryFee : 0);
+            document.getElementById('memoTotal').textContent = `৳${grandTotal}`;
+
+            updatePreview();
+        }
+
+        // Live Memo Text Updates
+        function updatePreview() {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const districtSelect = document.getElementById('custDistrict');
+            const districtText = districtSelect.options[districtSelect.selectedIndex] ? districtSelect.options[districtSelect.selectedIndex].text : '';
+            const address = document.getElementById('custAddress').value.trim();
+
+            document.getElementById('memoName').textContent = name || '---';
+            document.getElementById('memoPhone').textContent = phone || '---';
+            
+            let fullAddressText = '---';
+            if (address || (districtText && !districtSelect.disabled && districtSelect.value !== '')) {
+                fullAddressText = `${address ? address + ', ' : ''}${districtText && districtSelect.value !== '' ? districtText : ''}`;
+            }
+            document.getElementById('memoAddress').textContent = fullAddressText;
+        }
+
+        // Form Submit Handler & Modal Trigger
+        function handleOrderSubmit(event) {
+            event.preventDefault();
+
+            const checkboxes = document.querySelectorAll('.book-checkbox:checked');
+            if (checkboxes.length === 0) {
+                alert('অনুগ্রহ করে অন্তত একটি বই বাছাই করুন!');
+                return;
+            }
+
+            const totalPay = document.getElementById('memoTotal').textContent;
+            const randomId = 'BV-' + Math.floor(10000 + Math.random() * 90000);
+
+            document.getElementById('modalOrderId').textContent = randomId;
+            document.getElementById('modalTotalPay').textContent = totalPay;
+
+            // Show Modal
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            window.location.href = "index.html";
+        }
+
+        // Initialize Calculation on Load
+        window.onload = function() {
+            calculateTotal();
+        };
+    </script>
+</body>
+</html>
